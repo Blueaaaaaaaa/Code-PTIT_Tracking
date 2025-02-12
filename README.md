@@ -61,7 +61,7 @@ An intelligent recommendation system that leverages state-of-the-art AI/ML model
 ### Advanced AI Stack
 - Base LLM: [Deepseek-v3](https://huggingface.co/deepseek-ai/DeepSeek-V3) (GGUF quantized)
 - Code Understanding: CodeBERT/StarCoder
-- Reranking: BM25 + MonoT5/ColBERT
+- Reranking: BM25 + [ViRanker](https://huggingface.co/namdp-ptit/ViRanker)
 - Embeddings: [VoVanPhuc/sup-SimCSE-VietNamese-phobert-base](https://huggingface.co/VoVanPhuc/sup-SimCSE-VietNamese-phobert-base)
 - Vector Search: Milvus/Qdrant
 

@@ -1,206 +1,124 @@
-# Personalized Learning Path Recommendation System Pipeline
+# Learning Path Recommendation System for CodePTIT
 
-## 1. Data Pipeline & Processing Flow
+## Project Overview
+An intelligent recommendation system that leverages state-of-the-art AI/ML models to provide personalized learning paths for students based on their historical performance data from online judge systems (similar to LeetCode, HackerRank). The system analyzes student performance patterns, exercise difficulty, and learning progress to generate optimized study plans and targeted recommendations.
 
-### 1.1 Data Collection Layer
-- Student Performance Data
-  - Exercise attempts/submissions
-  - Time spent per problem
-  - Success/failure rates
-  - Topic-wise progress
-  - Historical grades
+## Key Features
 
-- Exercise Content Data
-  - Problem descriptions
-  - Solution patterns
-  - Difficulty ratings
-  - Topic classifications
-  - Prerequisites
+### 1. Intelligent Knowledge Tracing
+- Hybrid architecture combining Deepseek-v3 with specialized CodeBERT
+- Graph Neural Networks for concept relationship modeling
+- Multi-modal knowledge state tracking
+- Real-time learning progress analysis
 
-### 1.2 Data Processing Layer
-- Feature Engineering
-  - Time-based features
-  - Performance metrics
-  - Knowledge state vectors
-  - Topic mastery indicators
-  - Difficulty progression
+### 2. Advanced Exercise Analysis
+- StarCoder/CodeGen for deep code understanding
+- Difficulty assessment using neural networks
+- Prerequisites and concept mapping
+- Solution pattern recognition
+- Complexity scoring
 
-- Data Transformation
-  - Normalization
-  - Sequence padding
-  - Embedding generation
-  - Missing value handling
-  - Outlier detection
+### 3. Smart Path Optimization
+- Hybrid reranking system (BM25 + MonoT5/ColBERT)
+- RAG-enhanced personalized recommendations
+- Dynamic difficulty adjustment
+- Multi-objective path optimization
+- Adaptive learning sequences
 
-## 2. Model Architecture & Technical Decisions
+### 4. Performance Prediction
+- E5-large-v2 embeddings for semantic understanding
+- Vector similarity search with Milvus/Qdrant
+- Grade forecasting and weak area identification
+- Early intervention triggers
+- Progress tracking
 
-### 2.1 Knowledge Tracing Module
-- Model: Transformer-based Deep Knowledge Tracing (DKT)
-- Why Transformers?
-  - Better at capturing long-term dependencies
-  - Handles variable sequence lengths
-  - Parallel processing capability
-  - State-of-the-art performance
-  - Attention mechanism for important patterns
+## Grading Components
+- Attendance: 10%
+- Practical Exercises: 20%
+- Final Exam (70%):
+  - 1 question: 4 points
+  - 2 questions: 6 points
+  - 3 questions: 7.5 points
+  - 4 questions: 9 points
+  - 5 questions: 10 points
 
-### 2.2 Exercise Analysis Engine
-- Model: BERT + Custom Classification Head
-- Why BERT?
-  - Pre-trained on vast text data
-  - Understanding of programming concepts
-  - Contextual embeddings
-  - Multi-language support
-  - Fine-tuning capability
+## Technical Innovation
 
-### 2.3 Path Optimization
-- Model: Deep Q-Network (DQN) with Double Q-Learning
-- Why DQN?
-  - Handles complex state/action spaces
-  - Learning from experience
-  - Balance exploration/exploitation
-  - Stable learning process
-  - Policy optimization
+### Advanced AI Stack
+- Base LLM: [Deepseek-v3](https://huggingface.co/deepseek-ai/DeepSeek-V3) (GGUF quantized)
+- Code Understanding: CodeBERT/StarCoder
+- Reranking: BM25 + MonoT5/ColBERT
+- Embeddings: E5-large-v2
+- Vector Search: Milvus/Qdrant
 
-## 3. Technical Innovation Points
-
-### 3.1 Hybrid Architecture Benefits
-- Combines supervised + reinforcement learning
-- Leverages both content and behavioral data
-- Real-time adaptation capability
-- Explainable recommendations
+### Hybrid Architecture Benefits
+- Combines multiple SOTA models
+- Local deployment optimized
+- Resource-efficient processing
+- Real-time adaptation
 - Scalable design
 
-### 3.2 Advanced Features
-- Dynamic difficulty scaling
-- Multi-modal learning paths
+## Key Use Cases
+
+1. Student Onboarding
+- Initial knowledge assessment
+- Baseline establishment
+- Starting path generation
+
+2. Weekly Study Planning
+- Performance-based exercise sequencing
+- Dynamic difficulty adjustment
+- Time management optimization
+
+3. Performance Tracking
+- Real-time progress monitoring
+- Weak area identification
+- Intervention recommendations
+
+4. Topic Mastery
+- Concept relationship mapping
+- Knowledge state tracking
+- Prerequisite validation
+
+5. Adaptive Learning
+- Dynamic exercise selection
+- Difficulty optimization
 - Personalized pacing
-- Adaptive assessments
-- Continuous optimization
 
-## 4. Implementation Excellence
+6. Progress Analytics
+- Detailed performance metrics
+- Learning pattern analysis
+- Achievement tracking
 
-### 4.1 Performance Optimizations
-- Model quantization
-- Batch processing
-- Caching mechanisms
-- Incremental updates
-- Lazy loading
+## System Requirements
+- CPU: Modern multi-core processor
+- RAM: 16GB+ recommended
+- Storage: 10GB+ free space
+- GPU: Optional but recommended
+- OS: Windows/Mac/Linux
 
-### 4.2 Scalability Features
-- Modular architecture
-- Pluggable components
-- Horizontal scaling
+## Key Advantages
+
+1. State-of-the-art Performance
+- Advanced AI/ML models
+- Hybrid architecture
+- Efficient processing
+- Accurate recommendations
+
+2. Practical Implementation
+- Local deployment
 - Resource optimization
-- Efficient storage
+- Easy maintenance
+- Scalable design
 
-## 5. Decision Making Process
+3. Comprehensive Analysis
+- Multi-modal assessment
+- Deep code understanding
+- Pattern recognition
+- Predictive analytics
 
-### 5.1 Model Selection Criteria
-- Performance metrics
-  - Prediction accuracy
-  - Response time
-  - Resource usage
-  - Scalability
-  - Maintainability
-
-- Technical considerations
-  - Open-source availability
-  - Community support
-  - Documentation quality
-  - Implementation complexity
-  - Update frequency
-
-### 5.2 Architecture Decisions
-- Local deployment focus
-  - Reduced latency
-  - Data privacy
-  - Cost efficiency
-  - Offline capability
-  - Easy maintenance
-
-- Modular design
-  - Independent components
-  - Easy updates
-  - Testing simplicity
-  - Feature isolation
-  - Clear interfaces
-
-## 6. Technical Advantages
-
-### 6.1 SOTA Components
-- Transformer architecture
-  - State tracking
-  - Pattern recognition
-  - Sequence handling
-  - Attention mechanism
-  - Parallel processing
-
-- BERT implementation
-  - Context understanding
-  - Feature extraction
-  - Transfer learning
-  - Multi-lingual support
-  - Fine-tuning capability
-
-- DQN optimization
-  - Experience replay
-  - Target networks
-  - Policy learning
-  - Reward optimization
-  - State management
-
-### 6.2 Innovation Points
-- Hybrid learning approach
-  - Combined supervised/reinforcement
-  - Multi-objective optimization
-  - Adaptive learning
-  - Personalized paths
-  - Real-time updates
-
-- Advanced features
-  - Dynamic scaling
-  - Multi-modal paths
-  - Personalized pacing
-  - Continuous optimization
-  - Explainable results
-
-## 7. Performance Metrics
-
-### 7.1 Model Performance
-- Prediction accuracy: >85%
-- Response time: <100ms
-- Resource usage: <2GB RAM
-- Training time: <4 hours
-- Update time: <30 minutes
-
-### 7.2 System Metrics
-- Concurrent users: 100+
-- Data processing: 1000+ records/sec
-- Storage efficiency: <5GB
-- Cache hit rate: >90%
-- System uptime: >99.9%
-
-## 8. Future Scalability
-
-### 8.1 Technical Expansion
-- GPU acceleration
-- Distributed processing
-- Cloud integration
-- API development
-- Mobile support
-
-### 8.2 Feature Growth
-- Advanced visualization
-- Collaborative learning
-- Custom exercises
-- Extended analytics
-- Social features
-
-This pipeline demonstrates the technical excellence and innovation in the project through:
-1. State-of-the-art model selection
-2. Efficient architecture design
-3. Performance optimization
-4. Scalability considerations
-5. Future-proof implementation
-
-The combination of Transformers, BERT, and DQN creates a powerful, adaptive system that can provide personalized learning paths while maintaining high performance and scalability.
+4. User-Focused Design
+- Personalized recommendations
+- Adaptive learning paths
+- Clear progress tracking
+- Actionable insights

@@ -3,6 +3,19 @@
 ## Project Overview
 An intelligent recommendation system that leverages state-of-the-art AI/ML models to provide personalized learning paths for students based on their historical performance data from online judge systems (similar to LeetCode, HackerRank). The system analyzes student performance patterns, exercise difficulty, and learning progress to generate optimized study plans and targeted recommendations.
 
+## Perpose
+
+##### Goals:
+
+1. Generate optimal, individualized learning paths for each student.
+2. Reduce student struggles and dropout rates.
+
+##### Approach:
+
+1. Component grades consist of: attendance (10%), practical exercises (20%)
+2. The final exam (70%) has 5 questions (corresponding to the number of correct questions, the scores will be as follows: 1 question 4 points, 2 questions 6 points, 3 questions 7.5 points, 4 questions 9 points, 5 questions 10 points).
+3. The questions will have different types of exercises, of course, there are easy and difficult ones. What I want is for you to build a recommendation system based on student data. Let students know what type of exercise they should review to achieve what score? (A+, A, B+, B, ......)
+
 ## Key Features
 
 ### 1. Intelligent Knowledge Tracing
